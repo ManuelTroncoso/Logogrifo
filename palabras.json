@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "palabra": "agnosticos",
+        "descripcion": "Descripcion 1"
+    },
+    {
+        "id": "2",
+        "palabra": "musicante",
+        "descripcion": "Descripcion 2"
+    },
+    {
+        "id": "3",
+        "palabra": "gnostico",
+        "descripcion": "Descripcion 3"
+    },
+    {
+        "id": "4",
+        "palabra": "mustela",
+        "descripcion": "Descripcion 4"
+    },
+    {
+        "id": "5",
+        "palabra": "musico",
+        "descripcion": "Descripcion 5"
+    },
+    {
+        "id": "6",
+        "palabra": "murar",
+        "descripcion": "Descripcion 6"
+    },
+    {
+        "id": "7",
+        "palabra": "nube",
+        "descripcion": "Descripcion 7"
+    }
+]
