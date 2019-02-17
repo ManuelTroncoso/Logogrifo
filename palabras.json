@@ -2,36 +2,36 @@
     {
         "id": "1",
         "palabra": "agnosticos",
-        "descripcion": "Descripcion 1"
+        "descripcion": "Los que no creen posible creer en la realidad ultima"
     },
     {
         "id": "2",
         "palabra": "musicante",
-        "descripcion": "Descripcion 2"
+        "descripcion": "Persona que profesa la musica"
     },
     {
         "id": "3",
         "palabra": "gnostico",
-        "descripcion": "Descripcion 3"
+        "descripcion": "Pretende alcanzar el conocimiento absoluto de Dios"
     },
     {
         "id": "4",
         "palabra": "mustela",
-        "descripcion": "Descripcion 4"
+        "descripcion": "Comadreja"
     },
     {
         "id": "5",
         "palabra": "musico",
-        "descripcion": "Descripcion 5"
+        "descripcion": "Melómano"
     },
     {
         "id": "6",
         "palabra": "murar",
-        "descripcion": "Descripcion 6"
+        "descripcion": "Caza ratones"
     },
     {
         "id": "7",
         "palabra": "nube",
-        "descripcion": "Descripcion 7"
+        "descripcion": "No deja ver el sol"
     }
 ]
