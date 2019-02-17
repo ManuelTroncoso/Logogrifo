@@ -39,7 +39,7 @@ function CreaLogogrifo(palabras, allLetra) {
         for (let i = 0; i < 10 - filas; i++) {
             //Segundo for para crear los cuadrados donde iran las letras
             let valor = EscribeNum(palabras[filas].palabra[i]);
-            $("#row" + filas).append('<p>'+valor + '</p><input onchange="EscribeAll(' + valor + ', this.value)" type="text" class="n' + valor + '" name="" id="" maxlength="1">');
+            $("#row" + filas).append('<input onchange="EscribeAll(' + valor + ', this.value)" type="text" placeholder="'+valor+'" class="n' + valor + ' letras" name="" id="" maxlength="1">');
         }
         //Añade la descripción
         $("#all").append('<div class=row"><p> ' + palabras[filas].descripcion + ' </p></div> </div> ');
@@ -74,7 +74,7 @@ function EscribeNum(letra) {
 
 //Escribe la misma letra en los cuadrados corresponndiente.
 function EscribeAll(valor, texto) {
-
+    //Recorre todo los cuadrados con la misma clase y le asigna el valor correspondiente
     $('.n' + valor).each(function () {
         $(this).val(texto)
     })
@@ -83,34 +83,39 @@ function EscribeAll(valor, texto) {
 //Comprueba palabras
 function CompruebaPalabras() {
     let todas = true;
+    //Pausa el cronometro.
     clearInterval(control)
+    //Recorre el array con todas las letras
     for (let i = 0; i < allLetra.length; i++) {
         if ($('.n' + (i + 1)).val() != allLetra[i]) {
+            //Comprueba si el valor que tiene es el correcto
+            //Le añade una clase de 'error' o 'correcto' para diferenciarlos visualmente
             $('.n' + (i + 1)).addClass("error")
             todas = false;
 
         }
         else {
+            
             $('.n' + (i + 1)).addClass("correcto")
         }
         $('.n' + (i + 1)).prop("disabled", true)
     }
     $('#comprueba').css('display', 'none');
-    $('#reintentar').css('display', 'block');
+    $('#reintentar').css('display', 'inline-block');
     
+    //Si acierta toda te lanza un mensaje como que has ganado o que has perdido en caso contrario.
     if(todas ==  true){
-        alert("!Has ganado Felicidades¡")
+        alert("¡Has ganado Felicidades!")
     }
     else{
-        alert("Vamos que tu puedes")
+        alert("¡Has fallado, vuelvelo a intentar!")
     }
 
 }
 
-
+//Reinicia el juego
 function JuegadeNuevo() {
-
-
+    //Activa los input y quita los estilos.
     for (let i = 0; i <= allLetra.length; i++) {
         $('.n' + i).each(function () {
             $(this).val("")
@@ -119,6 +124,7 @@ function JuegadeNuevo() {
             $('.n' + (i)).removeClass("error")
         })
     }
+    //Restaura el cronometro
     mil = 0;
     sec = 0;
     mint = 0;
@@ -128,8 +134,9 @@ function JuegadeNuevo() {
     control = setInterval('time()', 10);
    
 
-
-    $('#comprueba').css('display', 'block');
+    // Hace que vaya apareciendo el botón de Reintentar o de comprobar segun 
+    // haga falta.
+    $('#comprueba').css('display', 'inline-block');
     $('#reintentar').css('display', 'none');
 }
 
@@ -141,19 +148,29 @@ function JuegadeNuevo() {
 // }
 
 
+//Funcion de cronometro.
 function time() {
+     
     mil = mil + 1;
-    document.getElementById('mil').innerHTML = ':' + mil;
-    if (mil == 99) {
+    //console.log(mil)
+    if(mil == 99){
         mil = 0;
         sec = sec + 1;
-        document.getElementById('sec').innerHTML = sec;
-        if (sec == 60) {
-            sec = 0;
-            document.getElementById('sec').innerHTML = sec;
+        if(sec == 59){
+            sec=0;
             mint = mint + 1;
-            document.getElementById('mint').innerHTML = mint + ":";
         }
     }
+    if(mil<10){
+        var a = document.getElementById('mil').innerHTML = ':0' + mil;
+    }
+    else var a = document.getElementById('mil').innerHTML = ':'+mil;
+    if(sec<10){
+        var b = document.getElementById('sec').innerHTML = ':0'+sec;
+    }else var b = document.getElementById('sec').innerHTML = ':' + sec;
+    if(mint<10){
+        var c = document.getElementById('mint').innerHTML = '&nbsp;0'+mint;
+    } else var c = document.getElementById('mint').innerHTML = mint;
+    
 
 }

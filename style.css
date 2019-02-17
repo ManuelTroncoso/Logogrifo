@@ -1,17 +1,35 @@
-input{
+/*Logogrífo*/
+input.letras{
     width:50px;
     height: 50px;
-    margin:5px;
-}
-p{
+    margin-right:5px;
+    text-align: center;
+    background-color: #fff;
+    border:1px solid silver;
+
 }
 .error{
-    -webkit-box-shadow: 0px 0px 33px -4px rgba(255,0,0,1);
-    -moz-box-shadow: 0px 0px 33px -4px rgba(255,0,0,1);
-    box-shadow: 0px 0px 33px -4px rgba(255,0,0,1);
+    border:1px solid rgb(255, 0, 0) !important;
+
+    
 }
 .correcto{
-    -webkit-box-shadow: 0px 0px 33px -4px rgb(0, 255, 0);
-    -moz-box-shadow: 0px 0px 33px -4px rgb(0, 255, 0);
-    box-shadow: 0px 0px 33px -4px rgb(0, 255, 0);
+    border:1px solid rgb(108, 180, 0) !important;
+}
+
+
+/*Botones*/
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#comprueba, #reintentar{
+    margin: 15px;
+}
+
+/*Cronómetro*/
+#cronometro{
+    text-align: center;
+    font-size: 1.5em;
 }
