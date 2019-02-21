@@ -152,7 +152,6 @@ function JuegadeNuevo() {
 function time() {
      
     mil = mil + 1;
-    //console.log(mil)
     if(mil == 99){
         mil = 0;
         sec = sec + 1;
@@ -171,6 +170,4 @@ function time() {
     if(mint<10){
         var c = document.getElementById('mint').innerHTML = '&nbsp;0'+mint;
     } else var c = document.getElementById('mint').innerHTML = mint;
-    
-
 }
