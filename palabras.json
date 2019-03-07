@@ -1,5 +1,5 @@
 [
-    {
+    [{
         "id": "1",
         "palabra": "agnosticos",
         "descripcion": "Los que no creen posible creer en la realidad ultima"
@@ -33,5 +33,40 @@
         "id": "7",
         "palabra": "nube",
         "descripcion": "No deja ver el sol"
-    }
+    }],
+    [{
+        "id": "1",
+        "palabra": "indeseable",
+        "descripcion": "Cosa que es indigno por ser deseado"
+    },
+    {
+        "id": "2",
+        "palabra": "spiderman",
+        "descripcion": "Superhéroe 'trepamuros"
+    },
+    {
+        "id": "3",
+        "palabra": "japonesa",
+        "descripcion": "Mujer procedente de Japón"
+    },
+    {
+        "id": "4",
+        "palabra": "mustela",
+        "descripcion": "Comadreja"
+    },
+    {
+        "id": "5",
+        "palabra": "jabato",
+        "descripcion": "Cria del jabalí"
+    },
+    {
+        "id": "6",
+        "palabra": "coche",
+        "descripcion": "Vehiculo de 5 ruedas"
+    },
+    {
+        "id": "7",
+        "palabra": "moto",
+        "descripcion": "Vehículo a 2 ruedas"
+    }]
 ]

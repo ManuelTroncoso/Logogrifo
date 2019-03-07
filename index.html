@@ -26,58 +26,93 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Felipa" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     <!-- Funcionamiento de jquery -->
 
 
     <title>Document</title>
 </head>
 
-<body class="container-fluid">
+<body>
     <div class="row name">
         <h1>Logogrifo</h1>
     </div>
-    <div class="row">
-        <div class="col-sm-3 centrar">
-            <button id="comprueba" class="btn btn-primary" onclick="CompruebaPalabras()">Comprueba!</button>
-            <button id="reintentar" class="btn btn-primary" style="display:none"
-                onclick="JuegadeNuevo()">Reintentar</button>
-            <button id="how" type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#exampleModalCenter">
-                ¿Cómo se juega?
-            </button>
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">¿Que es el Logogrifo?</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Pasatiempo que consiste en adivinar una determinada palabra, para lo cual es necesario
-                            adivinar primero otras que están
-                            formadas con elementos de aquella y de las cuales se da una indicación.
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <div class="alert alert-danger text-center" id="mError" role="alert">
+        <strong>Error!</strong> Introduce solo Letra!
+    </div>
+    <div class="container">
+            <div class="row dark">
+                    <div id="all" class="col-sm-9 "></div>
+                    <div class="col-sm-3 centrar " >
+                        <button id="comprueba" class="btn btn-primary" onclick="CompruebaPalabras()" data-toggle="modal"  data-target="#Comprobar">Comprueba!</button>
+                        
+                        <button id="how" type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModalCenter">
+                        Instrucciones
+                        </button>
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalCenterTitle">¿Que es el Logogrifo?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Pasatiempo que consiste en adivinar una determinada palabra, para lo cual es necesario
+                                        adivinar primero otras que están
+                                        formadas con elementos de aquella y de las cuales se da una indicación.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div id="all" class="col-sm-6"></div>
-        <div class="col-sm-3 centrar">
-            <p id="cronometro" class="center-block"><span id="mint">00:</span><span id="sec">00:</span><span
-                    id="mil">00</span></p>
-
-        </div>
-
     </div>
-
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Comprobar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="puesto"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" id="reintentar" class="btn btn-primary" onclick="JuegadeNuevo()" data-dismiss="modal">Intentalo de nuevo!</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 
 </html>

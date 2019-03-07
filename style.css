@@ -1,10 +1,29 @@
+html, body{
+    background-image: url(Photo/woodtype-846089.jpg);
+}
+.row{
+    width: 100%;
+    margin-left: 0 !important;
+}
+*{
+    box-sizing: border-box;
+}
 /*Titulo*/
+#all{
+    padding:30px 30px 30px 30px !important;
+   
+}
+.dark{
+    background-color: rgb(0,0,0,0.5);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
 .name{
-    background-color: black;
-    margin-bottom: 15px;    
+    background-color: black;  
+    margin-bottom: 15px;  
 }
 .name h1{
-    font-family: 'Felipa', cursive;
+    font-family:'Acme', sans-serif;
     color:white;
     margin:0 auto;
     font-size: 2.5em;
@@ -19,30 +38,40 @@ input.letras{
     text-align: center;
     background-color: #fff;
     border:1px solid silver;
-
+    border-radius: 5px;
 }
 .error{
-    border:1px solid rgb(255, 0, 0) !important;
-
-    
+    border:2px solid rgb(255, 0, 0) !important; 
 }
 .correcto{
-    border:1px solid rgb(108, 180, 0) !important;
+    border:2px solid rgb(108, 180, 0) !important;
 }
-
+#mError{
+    width: 50%;
+    margin:0 auto;
+    display: none;
+}
+.dark p{
+    margin-top: 10px !important;
+    font-size: 1.1em;
+    color: #fff;
+}
+input, p{
+    margin: 0 auto;
+}
+#row *{
+    background-color: red;
+}
 
 /*Botones*/
 .centrar{
+    padding:10px, 10px, 10px, 10px;
+    margin-right:20px;
+    margin-left:-20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #comprueba, #reintentar{
     margin: 15px;
-}
-
-/*Cronómetro*/
-#cronometro{
-    text-align: center;
-    font-size: 1.5em;
-}
+} 
